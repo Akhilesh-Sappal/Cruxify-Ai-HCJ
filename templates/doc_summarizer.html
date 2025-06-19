@@ -1,0 +1,17 @@
+<!-- templates/doc_summarizer.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Document Summarizer</h2>
+<form id="doc-form" enctype="multipart/form-data">
+  <input type="file" name="file" accept=".pdf,.docx,.txt" required>
+  <button type="submit">Summarize Document</button>
+</form>
+
+<div id="summary-output" style="display: none;">
+  <h3>Summary:</h3>
+  <pre id="summary-text"></pre>
+  <button onclick="copySummary()">Copy Summary</button>
+  <button onclick="downloadSummary()">Download Summary</button>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+<!-- templates/text_summarizer.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Text Summarizer</h2>
+<form id="text-form">
+  <textarea name="text" placeholder="Enter your text here..." required></textarea>
+  <button type="submit">Summarize</button>
+</form>
+
+<div id="summary-output" style="display: none;">
+  <h3>Summary:</h3>
+  <pre id="summary-text"></pre>
+  <button onclick="copySummary()">Copy Summary</button>
+  <button onclick="downloadSummary()">Download Summary</button>
+</div>
+{% endblock %}
