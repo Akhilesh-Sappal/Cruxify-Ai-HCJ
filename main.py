@@ -19,7 +19,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 # Setup Together API Key
-os.environ["TOGETHER_API_KEY"] = "0bc66dcded6a57c5aca11ec7f61089f423307023ba560e3b3178fb36c7923a10"
+os.environ["TOGETHER_API_KEY"] = "Your_API_Key"
 client = openai.OpenAI(
     api_key=os.environ.get("TOGETHER_API_KEY"),
     base_url="https://api.together.xyz/v1",
